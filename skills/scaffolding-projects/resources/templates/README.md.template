@@ -1,0 +1,76 @@
+# {{ project_name_pretty }}
+
+{{ description }}
+
+## Features
+
+- **FastAPI Backend**: High-performance API with premium Swagger UI (Obsidian theme).
+- **Dockerized**: Easy deployment with Podman/Docker Compose.
+{% if use_llm %}
+- **LLM Integration**: Standardized patterns for LLM calls with audit logging (latency, tokens).
+- **Audit Logging**: Mandatory persistence of interaction metadata.
+{% endif %}
+- **Mandatory Testing**: 100% functional workflow coverage with automated pre-deployment checks.
+
+## Getting Started
+
+### Prerequisites
+
+- `uv` installed
+- Podman/Docker
+
+### Local Development
+
+1.  Clone the repository and enter:
+    ```bash
+    cd {{ project_name }}
+    ```
+
+2.  Install dependencies:
+    ```bash
+    uv sync
+    ```
+
+3.  Configure environment:
+    ```bash
+    cp .env.sample .env
+    # Adjust values in .env
+    ```
+
+4.  **Verify Baseline**:
+    ```bash
+    ./scripts/pre_deploy_check.sh
+    ```
+
+5.  Run the application:
+    ```bash
+    uv run uvicorn src.{{ project_name }}.main:app --host 0.0.0.0 --port 8000 --reload
+    ```
+
+## Testing
+
+Standardized `pytest` suite for functional verification.
+
+```bash
+# Run all tests
+uv run pytest tests/ -v
+
+# Run pre-deployment check (Syntax + Tests)
+./scripts/pre_deploy_check.sh
+```
+
+## Deployment
+
+```bash
+# Ensure tests pass first!
+./scripts/pre_deploy_check.sh
+docker-compose up -d
+```
+
+## Standards
+
+This project follows the **Antigravity Homelab Standards**:
+- HKT Timezone (`Asia/Hong_Kong`)
+- Mandatory LLM Auditing (if applicable)
+- Pre-deployment Verification Scripts
+- Premium Obsidian Swagger Theme

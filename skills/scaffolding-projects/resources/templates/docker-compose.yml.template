@@ -1,0 +1,21 @@
+services:
+  app:
+    build: .
+    container_name: {{ project_name }}
+    restart: always
+    environment:
+      - TZ=Asia/Hong_Kong
+    env_file:
+      - .env
+    ports:
+      - "{{ host_port }}:${API_PORT}"
+    volumes:
+      - ./data:/app/data
+    dns:
+      - 10.0.5.241
+    networks:
+      - infra-net
+
+networks:
+  infra-net:
+    external: true

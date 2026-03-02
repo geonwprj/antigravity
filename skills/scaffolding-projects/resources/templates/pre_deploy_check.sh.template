@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e
+
+echo "Starting Pre-Deployment Checks for {{ project_name_pretty }}..."
+
+# 1. Validate Python Syntax
+echo "Checking Python syntax..."
+find src -name "*.py" | xargs python3 -m py_compile
+
+# 2. Run Fast Unit Tests
+echo "Running unit tests..."
+uv run pytest tests/ -v
+
+echo "Pre-Deployment Checks Passed!"

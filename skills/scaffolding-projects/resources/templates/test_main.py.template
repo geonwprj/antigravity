@@ -1,0 +1,20 @@
+import pytest
+import asyncio
+from httpx import ASGITransport, AsyncClient
+from {{ project_name }}.main import app
+
+@pytest.mark.asyncio
+async def test_health_check():
+    async with AsyncClient(transport=ASGITransport(app=app), base_url="http://test") as ac:
+        response = await ac.get("/docs") # Basic check if Swagger is up
+        assert response.status_code == 200
+
+{% if use_llm %}
+from unittest.mock import patch, AsyncMock
+@pytest.mark.asyncio
+async def test_llm_logic_placeholder():
+    # Placeholder for LLM workflow test
+    with patch("{{ project_name }}.main.logger") as mock_logger:
+        # Simulate logic here
+        pass
+{% endif %}
