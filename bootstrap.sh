@@ -24,10 +24,13 @@ mkdir -p "$BASE_DIR/antigravity/knowledge"
 mkdir -p "$BASE_DIR/antigravity/skills"
 mkdir -p "$AGENT_DIR/workflows"
 
-# 2. Set environment defaults
+# 3. Environment Defaults
 if [ ! -f "$HOME/.env" ]; then
-    echo "🌍 Setting timezone to Asia/Hong_Kong..."
-    echo "TZ=Asia/Hong_Kong" > "$HOME/.env"
+    # Automatically detect timezone or default to UTC if detection fails
+    DETECTED_TZ=$(timedatectl show --property=Timezone --value 2>/dev/null || echo "UTC")
+    echo "🌍 Detected system timezone: $DETECTED_TZ"
+    echo "TZ=$DETECTED_TZ" > "$HOME/.env"
+    echo "💡 Note: Timezone set in $HOME/.env. Adjust if needed."
 fi
 
 # 3. Download Core Rules & Logic

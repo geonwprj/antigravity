@@ -10,7 +10,7 @@ These rules are established for all projects in this homelab environment to ensu
 
 ## Connectivity & Environment
 - **NO LOCALHOST**: Never use `localhost` or `127.0.0.1`. The environment is accessed via SSH; always use the host IP `<HOST_IP>` or hostname `<HOST_NAME>`.
-- **Timezone**: Strict use of `Asia/Hong_Kong` (HKT) for all services, databases, and logs. Pass `TZ=Asia/Hong_Kong` in `.env` and `docker-compose.yml`.
+- **Timezone**: Strict use of accurate local timezone (e.g., `Asia/Hong_Kong`) for all services, databases, and logs. Pass `TZ` in `.env` and `docker-compose.yml`.
 
 ## Visual Excellence (UI/UX)
 - **Dark Mode Mandatory**: All interfaces (Swagger UI, WebApps) must feature a premium dark mode as the default.
@@ -35,7 +35,7 @@ These rules are established for all projects in this homelab environment to ensu
 ## Node.js Development
 - **Package Management**: Default to `npm` unless `pnpm` is present.
 - **Project Structure**: `src/` for logic, `public/` for assets, `tests/` for tests.
-- **Environment**: Strict `.env` management with `TZ=Asia/Hong_Kong`.
+- **Environment**: Strict `.env` management with `TZ=<TZ>`.
 
 ## General Standards
 - **API**: Default prefix `/api/v1/`.
@@ -51,7 +51,7 @@ These rules are established for all projects in this homelab environment to ensu
 Projects should follow the standard structure derived from the `abg` reference:
 ```env
 # Base configuration
-TZ=Asia/Hong_Kong
+TZ=<TZ>
 SERVER_HOST=0.0.0.0
 API_PORT=8000
 SERVER_MODE=production

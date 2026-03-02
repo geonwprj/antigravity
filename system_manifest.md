@@ -4,7 +4,7 @@ This document serves as the **Index and Map** for the current documentation and 
 
 ## 🏛️ Tier 1: Global Rules (Mandates)
 Universal mandates that apply to every workspace.
-- [GEMINI.md](file:///home/srvadm/.gemini/GEMINI.md): **Core Mandated Standards**. No localhost, HKT timezone, premium dark mode, `uv` sync, and Documentation Integrity.
+- [GEMINI.md](file:///home/srvadm/.gemini/GEMINI.md): **Core Mandated Standards**. No localhost, accurate local timezone alignment, premium dark mode, `uv` sync, and Documentation Integrity.
 
 ---
 

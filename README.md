@@ -64,7 +64,7 @@ Execute the single command below to initialize the environment:
 1. Creates `.gemini/` and `.agent/` hierarchies.
 2. Installs `GEMINI.md` core rules.
 3. Syncs standard `knowledge` and `skills`.
-4. Configures `TZ=Asia/Hong_Kong`.
+4. Configures `TZ` for local alignment.
 
 ### 💠 Final Verification
 Once the script completes, run `/sync-manifest` to verify the local node matches the global index.
@@ -98,4 +98,4 @@ graph TD
 ```
 
 ---
-*Maintained by genwch | 🕒 Timezone: Asia/Hong_Kong*
+*Maintained by genwch | 🕒 Timezone: Dynamic / Environment-synced*

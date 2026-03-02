@@ -4,7 +4,7 @@ services:
     container_name: {{ project_name }}
     restart: always
     environment:
-      - TZ=Asia/Hong_Kong
+      - TZ=<TZ>
     env_file:
       - .env
     ports:
