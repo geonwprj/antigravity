@@ -6,7 +6,16 @@ set -e
 
 echo "🌌 Initializing Antigravity 4-Tier Node..."
 
-# 1. Define base directories
+# 1. Dependency Check
+echo "🔍 Checking dependencies..."
+for cmd in curl git uv; do
+    if ! command -v $cmd &> /dev/null; then
+        echo "❌ Error: $cmd is not installed. Please install it first."
+        exit 1
+    fi
+done
+
+# 2. Define base directories
 BASE_DIR="$HOME/.gemini"
 AGENT_DIR="$HOME/.agent"
 

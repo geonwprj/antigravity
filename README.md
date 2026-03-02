@@ -7,6 +7,17 @@ Welcome to the **Engine Room** of the Antigravity Agent. This repository is the 
 
 ---
 
+## 🛠️ Prerequisites & Dependencies
+
+To ensure a smooth setup, the following tools must be installed on your LXC node:
+
+- **`curl`**: For downloading the bootstrap script and logic files.
+- **`git`**: For repository synchronization and version control.
+- **`uv`**: (Required) Fast Python package installer and resolver.
+- **`podman`**: (Recommended) For containerized service deployment.
+
+---
+
 ## 🚀 Quick Start: Zero-Latency Bootstrap
 
 Execute the command below on any fresh LXC node to instantly provision the 4-tier environment.
