@@ -16,11 +16,11 @@ This document is the unified source of truth for general technical standards in 
 
 ## 2. Infrastructure & Networking
 - **Subnets**:
-  - Server: `10.0.99.0/24` (Host: `10.0.99.118`)
-  - Client: `10.0.100.0/24` | IoT: `172.20.0.0/16` | DNS: `10.0.5.0/24`
+  - Server: `<SERVER_SUBNET>` (Host: `<HOST_IP>`)
+  - Client: `<CLIENT_SUBNET>` | IoT: `<IOT_SUBNET>` | DNS: `<DNS_SUBNET>`
 - **DNS & Domains**:
-  - Internal: `geonw.local` (Technitium CNAMEs).
-  - Public: `geow.uk` (Cloudflare Zero Trust).
+  - Internal: `<INTERNAL_DOMAIN>` (Technitium CNAMEs).
+  - Public: `<PUBLIC_DOMAIN>` (Cloudflare Zero Trust).
   - **Prohibited**: Never use `localhost` or `127.0.0.1`.
 - **Port Management**: Host-side mappings MUST be **> 20000**.
 - **Environments**:

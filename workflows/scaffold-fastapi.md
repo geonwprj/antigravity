@@ -14,4 +14,4 @@ description: Scaffold a new FastAPI project with homelab standards.
    ```
 4. **Verification**:
    - Check `docker-compose.yml`.
-   - Access Swagger UI at `http://dev02.geonw.local:<port>/api/v1/docs`.
+   - Access Swagger UI at `http://<HOST_NAME>:<port>/api/v1/docs`.

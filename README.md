@@ -53,7 +53,7 @@ You are helping me provision a new Antigravity agent node. This node must confor
 
 ### 🏗️ Build Philosophy
 - **GitHub-Synced**: The repository `geonwprj/antigravity` is the engine room.
-- **LXC-Native**: IP: `10.0.99.118` | SSH: Enabled.
+- **LXC-Native**: IP: `<HOST_IP>` | SSH: Enabled.
 - **uv-Powered**: Exclusive use of `uv` for package management.
 
 ### 🚀 Bootstrapping Sequence

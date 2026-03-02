@@ -9,7 +9,7 @@ Global Antigravity rules define how Agent behaves across all your workspaces. Us
 These rules are established for all projects in this homelab environment to ensure consistency, speed, and premium quality.
 
 ## Connectivity & Environment
-- **NO LOCALHOST**: Never use `localhost` or `127.0.0.1`. The environment is accessed via SSH; always use the host IP `10.0.99.118` or hostname `dev02.geonw.local`.
+- **NO LOCALHOST**: Never use `localhost` or `127.0.0.1`. The environment is accessed via SSH; always use the host IP `<HOST_IP>` or hostname `<HOST_NAME>`.
 - **Timezone**: Strict use of `Asia/Hong_Kong` (HKT) for all services, databases, and logs. Pass `TZ=Asia/Hong_Kong` in `.env` and `docker-compose.yml`.
 
 ## Visual Excellence (UI/UX)
@@ -30,7 +30,7 @@ These rules are established for all projects in this homelab environment to ensu
 - **Framework**: Use Next.js App Router by default.
 - **Styling**: Vanilla CSS or Tailwind CSS (if requested). Follow Premium Aesthetics rule.
 - **Performance**: Optimize for fast loads. Use SWR with `mutate` patterns for partial UI refreshes.
-- **Verification**: Test UI via `http://dev02.geonw.local:port` in browser tools.
+- **Verification**: Test UI via `http://<HOST_NAME>:port` in browser tools.
 
 ## Node.js Development
 - **Package Management**: Default to `npm` unless `pnpm` is present.
