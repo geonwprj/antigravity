@@ -61,8 +61,8 @@ Pages: Dashboard, Profile list, Profile editor with live preview.
 - `uv run pytest -v` (engine tests + API integration tests)
 
 ### Browser Verification
-- Swagger UI at `http://<HOST_NAME>:28002/docs`
-- Frontend at `http://<HOST_NAME>:28003`
+- Swagger UI at `http://dev02.geonw.local:28002/docs`
+- Frontend at `http://dev02.geonw.local:28003`
 
 ### Manual Verification
 - `podman-compose up -d` then check health

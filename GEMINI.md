@@ -40,7 +40,8 @@ These rules are established for all projects in this homelab environment to ensu
 ## General Standards
 - **API**: Default prefix `/api/v1/`.
 - **Security**: Always generate complex random passwords for new services.
-- **Git**: Frequent commits with descriptive messages.
+- **Git**: Frequent commits with descriptive messages. Always ignore log files (`*.log`) and log directories (`logs/`) in `.gitignore` to prevent environment-specific pollution.
+- **Releases**: For every version bump, ALWAYS create a formal GitHub Release using `gh release create` and verify that the associated container image build (GitHub Action) completes successfully (`success`) before marking the task as done.
 - **Database Hygiene**: Roll back or clean up test data records after verification to prevent environment pollution.
 
 ## Documentation Integrity

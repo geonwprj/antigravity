@@ -70,7 +70,7 @@ docker-compose up -d
 ## Standards
 
 This project follows the **Antigravity Homelab Standards**:
-- <TIMEZONE> Timezone (`<TZ>`)
+- HKT Timezone (`Asia/Hong_Kong`)
 - Mandatory LLM Auditing (if applicable)
 - Pre-deployment Verification Scripts
 - Premium Obsidian Swagger Theme
